@@ -84,7 +84,7 @@ h1 {
 
 /* gradient */
 #fade-stop-1 {
-  stop-color: #222;
+  stop-color: #000;
   transition: stop-color 0.5s ease;
 }
 

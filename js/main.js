@@ -41,3 +41,16 @@ var setLightColor = function(r, g, b) {
   valG.textContent = g;
   valB.textContent = b;
 }
+
+var refreshLightScript;
+var refreshLight = function() {
+  if (refreshLightScript) {
+    refreshLightScript.parentNode.removeChild(refreshLightScript);
+  }
+  var script = document.createElement('script');
+  script.setAttribute('src', 'js/refreshLight.js');
+  document.head.appendChild(script);
+  refreshLightScript = script;
+}
+
+setInterval(refreshLight, 5000);
