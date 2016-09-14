@@ -1,0 +1,15 @@
+{
+  "name": "light-bulb",
+  "description": "An intelligent light bulb which can be controled by AWS IoT and NiFi.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ijokarumawak"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ijokarumawak/light-bulb"
+  },
+  "dependencies": {
+    "aws-iot-device-sdk": "1.0.12"
+  }
+}
