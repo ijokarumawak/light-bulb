@@ -23,7 +23,6 @@ h1 {
 .metric-container {
   flex-grow: 1;
   border-left: 1px solid gray;
-  background-color: #0c0c0c;
 }
 
 .metric {
@@ -50,20 +49,19 @@ h1 {
   border-bottom: 1px solid black;
   height: 16px;
   margin-bottom: 30px;
+  width: 0px;
+  transition: width 0.5s ease;
 }
 
-.metric-bar-r {
-  width: 101px;
+#metric-bar-r {
   background: linear-gradient(to bottom, #faa, #f00, #a00, #faa);
 }
 
-.metric-bar-g {
-  width: 153px;
+#metric-bar-g {
   background: linear-gradient(to bottom, #afa, #3f3, #0a0, #afa);
 }
 
-.metric-bar-b {
-  width: 22px;
+#metric-bar-b {
   background: linear-gradient(to bottom, #aaf, #00f, #00a, #aaf);
 }
 
@@ -76,7 +74,8 @@ h1 {
 #light {
   stroke: white;
   stroke-width: 4;
-  fill: yellow;
+  fill: #111;
+  transition: fill 0.5s ease;
 }
 
 #reflection {
@@ -85,7 +84,8 @@ h1 {
 
 /* gradient */
 #fade-stop-1 {
-  stop-color: yellow;
+  stop-color: #222;
+  transition: stop-color 0.5s ease;
 }
 
 #fade-stop-2 {
