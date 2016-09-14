@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Light Bulb</title>
+ 
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+ 
+</head>
+ 
+<body>
+<h1>Intelligent Light Bulb</h1>
+<div class="base-container">
+  <div class="lb-container">
+    <svg width="300" height="300">
+    <defs>
+      <radialGradient id="fade">
+        <stop id="fade-stop-1" offset="33%"/>
+        <stop id="fade-stop-2" offset="100%"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="150" cy="180" rx="100" ry="30" id="reflection" />
+    <ellipse cx="150" cy="170" rx="30" ry="10" class="bulb"/>
+    <ellipse cx="150" cy="160" rx="30" ry="10" class="bulb"/>
+    <ellipse cx="150" cy="150" rx="30" ry="10" class="bulb"/>
+    <circle cx="150" cy="100" r="50" id="light" />
+    <rect x="110" y="80" width="10" height="10" class="highlight" />
+    <rect x="120" y="60" width="15" height="15" class="highlight"/>
+    </svg>
+  </div>
+  <div class="metric-container">
+
+    <div class="metric">
+      <div class="metric-label txt-r">Red</div>
+      <div class="metric-value txt-r">101</div>
+    </div>
+    <div class="bar metric-bar-r">&nbsp;</div>
+ 
+    <div class="metric">
+      <div class="metric-label txt-r">Green</div>
+      <div class="metric-value txt-r">153</div>
+    </div>
+    <div class="bar metric-bar-g">&nbsp;</div>
+
+    <div class="metric">
+      <div class="metric-label txt-r">Blue</div>
+      <div class="metric-value txt-r">22</div>
+    </div>
+    <div class="bar metric-bar-b">&nbsp;</div>
+
+  </div>
+</div>
+</body>
+</html>

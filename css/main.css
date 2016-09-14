@@ -1,0 +1,102 @@
+body {
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.base-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.lb-container {
+  background-color: black;
+}
+
+.metric-container {
+  flex-grow: 1;
+  border-left: 1px solid gray;
+  background-color: #0c0c0c;
+}
+
+.metric {
+  display: flex;
+  padding: 10px;
+}
+
+.metric-label {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.metric-value {
+  width: 200px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 300%;
+  border: 1px solid gray;
+  background-color: #030;
+}
+
+.bar {
+  border-radius: 0px 8px 8px 0px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+  height: 16px;
+  margin-bottom: 30px;
+}
+
+.metric-bar-r {
+  width: 101px;
+  background: linear-gradient(to bottom, #faa, #f00, #a00, #faa);
+}
+
+.metric-bar-g {
+  width: 153px;
+  background: linear-gradient(to bottom, #afa, #3f3, #0a0, #afa);
+}
+
+.metric-bar-b {
+  width: 22px;
+  background: linear-gradient(to bottom, #aaf, #00f, #00a, #aaf);
+}
+
+.txt-r {
+  text-align: right;
+}
+
+/* SVG */
+
+#light {
+  stroke: white;
+  stroke-width: 4;
+  fill: yellow;
+}
+
+#reflection {
+  fill: url(#fade);
+}
+
+/* gradient */
+#fade-stop-1 {
+  stop-color: yellow;
+}
+
+#fade-stop-2 {
+  stop-color: black;
+}
+
+.highlight {
+  fill: white;
+}
+
+.bulb {
+  fill: gray;
+  stroke: lightgray;
+}
