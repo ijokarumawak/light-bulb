@@ -51,3 +51,6 @@ jspm_packages
 certs
 tmp
 tweets
+badwords/en
+badwords/ja
+
