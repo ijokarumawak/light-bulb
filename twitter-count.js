@@ -13,7 +13,7 @@ var measureFile = (file) => {
   return total;
 }
 
-var from = moment().subtract(3, 'minutes').format('YYYYMMDDhhmmss');
+var from = moment().subtract(30, 'seconds').format('YYYYMMDDHHmmss');
 
 var measureColor = (color, callback) => {
   var dir = './tweets/' + color;

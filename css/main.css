@@ -1,7 +1,7 @@
 body {
   color: white;
   font-family: Verdana, Geneva, sans-serif;
-  padding: 0px;
+  padding: 10px;
   margin: 0px;
   background-color: black;
 }
@@ -12,8 +12,8 @@ h1 {
 
 .base-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .lb-container {
@@ -21,7 +21,6 @@ h1 {
 }
 
 .metric-container {
-  flex-grow: 1;
   border-left: 1px solid gray;
 }
 
@@ -67,6 +66,41 @@ h1 {
 
 .txt-r {
   text-align: right;
+}
+
+.tweet-container {
+  padding: 20px;
+}
+
+#tweet-navi {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+#tweet-navi span {
+  padding: 20px;
+}
+
+#tweet-navi span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.tweet {
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 5px;
+  background-color: #222;
+}
+
+.tweet-pimg {
+  align-self: center;
+}
+
+.tweet-text {
+  align-self: center;
+  padding: 5px;
+  color: #ddd;
 }
 
 /* SVG */
