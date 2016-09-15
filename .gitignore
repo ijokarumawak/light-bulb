@@ -49,3 +49,5 @@ jspm_packages
 
 # Followings are simply ignored:
 certs
+tmp
+tweets

@@ -1,4 +1,5 @@
 var awsIot = require('aws-iot-device-sdk');
+var twitterCount = require('./twitter-count');
 
 const thingName = 'LightBulb';
 
@@ -10,7 +11,7 @@ const thingShadows = awsIot.thingShadow({
   region: 'ap-northeast-1'
 });
 
-var readArg = (i, x) => {
+var readArgColor = (i, x) => {
   var n = process.argv[i];
   if (typeof(n) === 'string') {
     n = parseInt(n);
@@ -24,28 +25,44 @@ var readArg = (i, x) => {
   return n;
 }
 
+var updateColor = (rgb) => {
+  thingShadows.on('connect', function() {
+    console.log('Connected to AWS IoT!');
+    thingShadows.register(thingName);
 
-var r = readArg(2, 'r');
-var g = readArg(3, 'g');
-var b = readArg(4, 'b');
+    var stateObject = {state: {desired: rgb }};
+    console.log('Updating shadow state...', stateObject);
+    var clientToken = thingShadows.update(thingName, stateObject);
+    console.log('Updated token', clientToken);
 
-thingShadows.on('connect', function() {
-  console.log('Connected to AWS IoT!');
-  thingShadows.register(thingName);
+    thingShadows.on('status', function(thingName, stat, clientToken, stateObject) {
+      console.log('stat', stat);
+      console.log('status', stateObject);
+    });
 
-  var stateObject = {state: {desired:
-                {r: r, g: g, b: b}}};
-  console.log('Updating shadow state...', stateObject);
-  var clientToken = thingShadows.update(thingName, stateObject);
-  console.log('Updated token', clientToken);
+    setTimeout(() => {
+      console.log('Disconnecting from AWS IoT...');
+      thingShadows.end();
+    }, 3000);
+  });
+}
 
-  thingShadows.on('status', function(thingName, stat, clientToken, stateObject) {
-    console.log('stat', stat);
-    console.log('status', stateObject);
+var inputSource = process.argv[2];
+
+if ('direct' === inputSource) {
+  var rgb = {
+    r: readArgColor(3, 'r'),
+    g: readArgColor(4, 'g'),
+    b: readArgColor(5, 'b')
+  };
+  updateColor(rgb);
+
+} else if ('twitter' === inputSource) {
+  twitterCount.measureColors((err, rgb) => {
+    updateColor(rgb);
   });
 
-  setTimeout(() => {
-    console.log('Disconnecting from AWS IoT...');
-    thingShadows.end();
-  }, 3000);
-});
+} else {
+  console.log('Invalid input source', inputSource, 'should be either one of:', 'direct', 'twitter');
+  process.exit(1);
+}
