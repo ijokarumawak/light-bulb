@@ -2,7 +2,7 @@
 <template encoding-version="1.0">
   <description>Connect to AWS IoT and update the Light Bulb ThingShadow status, based on the result of twitter messages.</description>
   <groupId>2b0e262d-0157-1000-343e-495006f8468e</groupId>
-  <name>update-light-bulb-shadow</name>
+  <name>update-light-bulb-shadow-v2</name>
   <snippet>
     <processGroups>
       <id>01571039-7d62-1b34-0000-000000000000</id>
@@ -44,7 +44,7 @@
             <id>01571027-7d62-1b34-0000-000000000000</id>
             <type>PROCESSOR</type>
           </destination>
-          <flowFileExpiration>0 sec</flowFileExpiration>
+          <flowFileExpiration>30 sec</flowFileExpiration>
           <labelIndex>1</labelIndex>
           <name></name>
           <selectedRelationships>inactive</selectedRelationships>
@@ -400,5 +400,5 @@ because Aggregate by Color can emit
       <name>Update Light Bulb Shadow</name>
     </processGroups>
   </snippet>
-  <timestamp>09/16/2016 11:21:57 JST</timestamp>
+  <timestamp>09/16/2016 12:52:17 JST</timestamp>
 </template>
