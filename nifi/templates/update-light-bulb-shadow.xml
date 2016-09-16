@@ -1,0 +1,404 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description>Connect to AWS IoT and update the Light Bulb ThingShadow status, based on the result of twitter messages.</description>
+  <groupId>2b0e262d-0157-1000-343e-495006f8468e</groupId>
+  <name>update-light-bulb-shadow</name>
+  <snippet>
+    <processGroups>
+      <id>01571039-7d62-1b34-0000-000000000000</id>
+      <parentGroupId>2b0e262d-0157-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>01571029-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>01571038-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>30 min</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>output stream</selectedRelationships>
+          <source>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>01571027-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102e-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>01571027-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>inactive</selectedRelationships>
+          <source>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>0157102a-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>01571040-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>0157102a-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <source>
+            <groupId>01571039-7d62-1b34-0000-000000000000</groupId>
+            <id>0157103f-7d62-1b34-0000-000000000000</id>
+            <type>INPUT_PORT</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <inputPorts>
+          <id>0157103f-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <position>
+            <x>1494.5208749235471</x>
+            <y>517.0770060627378</y>
+          </position>
+          <comments></comments>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>color-tweet-file</name>
+          <state>RUNNING</state>
+          <type>INPUT_PORT</type>
+        </inputPorts>
+        <labels>
+          <id>0157102f-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <position>
+            <x>1259.5207504238806</x>
+            <y>638.0769823396145</y>
+          </position>
+          <height>91.00003051757812</height>
+          <label>Use Monitor Activity to avoid calling
+Update Light Bulb Shadow too frequently
+because Aggregate by Color can emit
+3 files (r,g,b) at the same time.</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>240.0001220703125</width>
+        </labels>
+        <processors>
+          <id>01571027-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <position>
+            <x>1443.5059949928389</x>
+            <y>1008.4162141294073</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Command Arguments</key>
+                <value>
+                  <name>Command Arguments</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Command Path</key>
+                <value>
+                  <name>Command Path</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Ignore STDIN</key>
+                <value>
+                  <name>Ignore STDIN</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Working Directory</key>
+                <value>
+                  <name>Working Directory</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Argument Delimiter</key>
+                <value>
+                  <name>Argument Delimiter</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Output Destination Attribute</key>
+                <value>
+                  <name>Output Destination Attribute</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Max Attribute Length</key>
+                <value>
+                  <name>Max Attribute Length</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Command Arguments</key>
+                <value>update-light-bulb-shadow.js;twitter</value>
+              </entry>
+              <entry>
+                <key>Command Path</key>
+                <value>node</value>
+              </entry>
+              <entry>
+                <key>Ignore STDIN</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Working Directory</key>
+                <value>${lightbulb.home}</value>
+              </entry>
+              <entry>
+                <key>Argument Delimiter</key>
+                <value>;</value>
+              </entry>
+              <entry>
+                <key>Output Destination Attribute</key>
+              </entry>
+              <entry>
+                <key>Max Attribute Length</key>
+                <value>256</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Update Light Bulb Shadow</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>original</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>output stream</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+        </processors>
+        <processors>
+          <id>0157102a-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <position>
+            <x>1439.4272950788738</x>
+            <y>736.5982427477597</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Threshold Duration</key>
+                <value>
+                  <name>Threshold Duration</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Continually Send Messages</key>
+                <value>
+                  <name>Continually Send Messages</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Inactivity Message</key>
+                <value>
+                  <name>Inactivity Message</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Activity Restored Message</key>
+                <value>
+                  <name>Activity Restored Message</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Copy Attributes</key>
+                <value>
+                  <name>Copy Attributes</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Monitoring Scope</key>
+                <value>
+                  <name>Monitoring Scope</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Reporting Node</key>
+                <value>
+                  <name>Reporting Node</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Threshold Duration</key>
+                <value>1 sec</value>
+              </entry>
+              <entry>
+                <key>Continually Send Messages</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Inactivity Message</key>
+                <value>Lacking activity as of time: ${now():format('yyyy/MM/dd HH:mm:ss')}; flow has been inactive for ${inactivityDurationMillis:toNumber():divide(60000)} minutes</value>
+              </entry>
+              <entry>
+                <key>Activity Restored Message</key>
+                <value>Activity restored at time: ${now():format('yyyy/MM/dd HH:mm:ss')} after being inactive for ${inactivityDurationMillis:toNumber():divide(60000)} minutes</value>
+              </entry>
+              <entry>
+                <key>Copy Attributes</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Monitoring Scope</key>
+                <value>node</value>
+              </entry>
+              <entry>
+                <key>Reporting Node</key>
+                <value>all</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>MonitorActivity</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>activity.restored</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>inactive</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.MonitorActivity</type>
+        </processors>
+        <processors>
+          <id>01571038-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>01571039-7d62-1b34-0000-000000000000</parentGroupId>
+          <position>
+            <x>1445.0910633050066</x>
+            <y>1270.9520754694581</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Log Level</key>
+                <value>
+                  <name>Log Level</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Log Payload</key>
+                <value>
+                  <name>Log Payload</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attributes to Log</key>
+                <value>
+                  <name>Attributes to Log</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attributes to Ignore</key>
+                <value>
+                  <name>Attributes to Ignore</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Log prefix</key>
+                <value>
+                  <name>Log prefix</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Log Level</key>
+                <value>info</value>
+              </entry>
+              <entry>
+                <key>Log Payload</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Attributes to Log</key>
+              </entry>
+              <entry>
+                <key>Attributes to Ignore</key>
+              </entry>
+              <entry>
+                <key>Log prefix</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>LogAttribute</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.LogAttribute</type>
+        </processors>
+      </contents>
+      <name>Update Light Bulb Shadow</name>
+    </processGroups>
+  </snippet>
+  <timestamp>09/16/2016 11:21:57 JST</timestamp>
+</template>

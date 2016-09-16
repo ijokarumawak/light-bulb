@@ -1,0 +1,1079 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description>Get tweets then route those into red, green and blue.</description>
+  <groupId>2b0e262d-0157-1000-343e-495006f8468e</groupId>
+  <name>get-color-tweets</name>
+  <snippet>
+    <processGroups>
+      <id>0157101f-fb84-1b2f-0000-000000000000</id>
+      <parentGroupId>2b0e262d-0157-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>0157100f-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571023-fb84-1b2f-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157100e-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>01571012-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571024-fb84-1b2f-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571011-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>01571015-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571025-fb84-1b2f-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571014-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102b-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571026-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>unmatched</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157102a-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102c-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571014-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>blue</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157102a-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102d-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571011-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>green</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157102a-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102e-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571029-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571027-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157102f-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571029-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571028-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>01571030-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571006-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>matched</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571029-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>01571044-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157100e-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>red-en</selectedRelationships>
+          <selectedRelationships>red-ja</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157102a-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>0157109c-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>0157102a-fb84-1b2f-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>0157101f-fb84-1b2f-0000-000000000000</groupId>
+            <id>01571006-7d62-1b34-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <labels>
+          <id>01571022-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1629.0209184525443</x>
+            <y>358.89630631623186</y>
+          </position>
+          <height>72.77055358886719</height>
+          <label>If other fields than text have a color keyword, 
+then that tweet is routed here.</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>340.9820251464844</width>
+        </labels>
+        <labels>
+          <id>01571045-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>485.41250944170736</x>
+            <y>263.29323899321486</y>
+          </position>
+          <height>90.5938949584961</height>
+          <label>Since 'red' can be used a lot as a part of past tense words,
+a special treatment was needed here.
+Otherwise, red can be always 255.</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>337.9377746582031</width>
+        </labels>
+        <outputPorts>
+          <id>01571023-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>490.8791851692439</x>
+            <y>712.3621453689199</y>
+          </position>
+          <comments></comments>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>red</name>
+          <state>RUNNING</state>
+          <type>OUTPUT_PORT</type>
+        </outputPorts>
+        <outputPorts>
+          <id>01571024-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>921.2239117317439</x>
+            <y>825.0306634353261</y>
+          </position>
+          <comments></comments>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>green</name>
+          <state>RUNNING</state>
+          <type>OUTPUT_PORT</type>
+        </outputPorts>
+        <outputPorts>
+          <id>01571025-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1393.1468243294003</x>
+            <y>801.8918084548574</y>
+          </position>
+          <comments></comments>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>blue</name>
+          <state>RUNNING</state>
+          <type>OUTPUT_PORT</type>
+        </outputPorts>
+        <processors>
+          <id>01571006-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1579.736281290019</x>
+            <y>-99.70244681474858</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>jolt-transform</key>
+                <value>
+                  <name>jolt-transform</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-custom-class</key>
+                <value>
+                  <name>jolt-custom-class</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-custom-modules</key>
+                <value>
+                  <name>jolt-custom-modules</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-spec</key>
+                <value>
+                  <name>jolt-spec</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>jolt-transform</key>
+                <value>jolt-transform-shift</value>
+              </entry>
+              <entry>
+                <key>jolt-custom-class</key>
+              </entry>
+              <entry>
+                <key>jolt-custom-modules</key>
+              </entry>
+              <entry>
+                <key>jolt-spec</key>
+                <value>{
+	"id_str": "&amp;0",
+	"text": "&amp;0",
+	"created_at": "&amp;0",
+	"user": {
+      "id": "user.&amp;0",
+      "screen_name": "user.&amp;0",
+      "profile_image_url_https": "user.&amp;0"
+	}
+}</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>JoltTransformJSON</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.JoltTransformJSON</type>
+        </processors>
+        <processors>
+          <id>0157100e-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>437.3533067017785</x>
+            <y>439.9571812242479</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>
+                  <name>color</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>red</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>UpdateAttribute</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style>
+            <entry>
+              <key>background-color</key>
+              <value>#d11a10</value>
+            </entry>
+          </style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+          <id>01571011-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>866.5810899049035</x>
+            <y>570.4079258531542</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>
+                  <name>color</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>green</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>UpdateAttribute</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style>
+            <entry>
+              <key>background-color</key>
+              <value>#14d107</value>
+            </entry>
+          </style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+          <id>01571014-7d62-1b34-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1338.1958359986534</x>
+            <y>522.0059483140917</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>
+                  <name>color</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>color</key>
+                <value>blue</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>UpdateAttribute</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style>
+            <entry>
+              <key>background-color</key>
+              <value>#2553cf</value>
+            </entry>
+          </style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+          <id>01571026-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1625.7720947265625</x>
+            <y>213.74755859375</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Log Level</key>
+                <value>
+                  <name>Log Level</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Log Payload</key>
+                <value>
+                  <name>Log Payload</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attributes to Log</key>
+                <value>
+                  <name>Attributes to Log</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attributes to Ignore</key>
+                <value>
+                  <name>Attributes to Ignore</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Log prefix</key>
+                <value>
+                  <name>Log prefix</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Log Level</key>
+                <value>debug</value>
+              </entry>
+              <entry>
+                <key>Log Payload</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Attributes to Log</key>
+              </entry>
+              <entry>
+                <key>Attributes to Ignore</key>
+              </entry>
+              <entry>
+                <key>Log prefix</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Log Unmatched</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.LogAttribute</type>
+        </processors>
+        <processors>
+          <id>01571027-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1214.7622680664062</x>
+            <y>-389.00389432907104</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Twitter Endpoint</key>
+                <value>
+                  <name>Twitter Endpoint</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Consumer Key</key>
+                <value>
+                  <name>Consumer Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Consumer Secret</key>
+                <value>
+                  <name>Consumer Secret</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Token</key>
+                <value>
+                  <name>Access Token</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Token Secret</key>
+                <value>
+                  <name>Access Token Secret</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Languages</key>
+                <value>
+                  <name>Languages</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Terms to Filter On</key>
+                <value>
+                  <name>Terms to Filter On</name>
+                </value>
+              </entry>
+              <entry>
+                <key>IDs to Follow</key>
+                <value>
+                  <name>IDs to Follow</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Locations to Filter On</key>
+                <value>
+                  <name>Locations to Filter On</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Twitter Endpoint</key>
+                <value>Filter Endpoint</value>
+              </entry>
+              <entry>
+                <key>Consumer Key</key>
+              </entry>
+              <entry>
+                <key>Consumer Secret</key>
+              </entry>
+              <entry>
+                <key>Access Token</key>
+              </entry>
+              <entry>
+                <key>Access Token Secret</key>
+              </entry>
+              <entry>
+                <key>Languages</key>
+              </entry>
+              <entry>
+                <key>Terms to Filter On</key>
+                <value>赤,緑,青</value>
+              </entry>
+              <entry>
+                <key>IDs to Follow</key>
+              </entry>
+              <entry>
+                <key>Locations to Filter On</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Get Color Tweets (Ja)</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.twitter.GetTwitter</type>
+        </processors>
+        <processors>
+          <id>01571028-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>673.9058227539062</x>
+            <y>-388.77402448654175</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Twitter Endpoint</key>
+                <value>
+                  <name>Twitter Endpoint</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Consumer Key</key>
+                <value>
+                  <name>Consumer Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Consumer Secret</key>
+                <value>
+                  <name>Consumer Secret</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Token</key>
+                <value>
+                  <name>Access Token</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Token Secret</key>
+                <value>
+                  <name>Access Token Secret</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Languages</key>
+                <value>
+                  <name>Languages</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Terms to Filter On</key>
+                <value>
+                  <name>Terms to Filter On</name>
+                </value>
+              </entry>
+              <entry>
+                <key>IDs to Follow</key>
+                <value>
+                  <name>IDs to Follow</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Locations to Filter On</key>
+                <value>
+                  <name>Locations to Filter On</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Twitter Endpoint</key>
+                <value>Filter Endpoint</value>
+              </entry>
+              <entry>
+                <key>Consumer Key</key>
+              </entry>
+              <entry>
+                <key>Consumer Secret</key>
+              </entry>
+              <entry>
+                <key>Access Token</key>
+              </entry>
+              <entry>
+                <key>Access Token Secret</key>
+              </entry>
+              <entry>
+                <key>Languages</key>
+              </entry>
+              <entry>
+                <key>Terms to Filter On</key>
+                <value>red,green,blue</value>
+              </entry>
+              <entry>
+                <key>IDs to Follow</key>
+              </entry>
+              <entry>
+                <key>Locations to Filter On</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Get Color Tweets (En)</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.twitter.GetTwitter</type>
+        </processors>
+        <processors>
+          <id>01571029-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>924.568603515625</x>
+            <y>-108.71580743789673</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Destination</key>
+                <value>
+                  <name>Destination</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Return Type</key>
+                <value>
+                  <name>Return Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Path Not Found Behavior</key>
+                <value>
+                  <name>Path Not Found Behavior</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>
+                  <name>Null Value Representation</name>
+                </value>
+              </entry>
+              <entry>
+                <key>id_str</key>
+                <value>
+                  <name>id_str</name>
+                </value>
+              </entry>
+              <entry>
+                <key>screen_name</key>
+                <value>
+                  <name>screen_name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>text</key>
+                <value>
+                  <name>text</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Destination</key>
+                <value>flowfile-attribute</value>
+              </entry>
+              <entry>
+                <key>Return Type</key>
+                <value>auto-detect</value>
+              </entry>
+              <entry>
+                <key>Path Not Found Behavior</key>
+                <value>ignore</value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>empty string</value>
+              </entry>
+              <entry>
+                <key>id_str</key>
+                <value>$.id_str</value>
+              </entry>
+              <entry>
+                <key>screen_name</key>
+                <value>$.user.screen_name</value>
+              </entry>
+              <entry>
+                <key>text</key>
+                <value>$.text</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>EvaluateJsonPath</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>matched</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>unmatched</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+        </processors>
+        <processors>
+          <id>0157102a-fb84-1b2f-0000-000000000000</id>
+          <parentGroupId>0157101f-fb84-1b2f-0000-000000000000</parentGroupId>
+          <position>
+            <x>870.699053045658</x>
+            <y>197.4671866596932</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Routing Strategy</key>
+                <value>
+                  <name>Routing Strategy</name>
+                </value>
+              </entry>
+              <entry>
+                <key>blue</key>
+                <value>
+                  <name>blue</name>
+                </value>
+              </entry>
+              <entry>
+                <key>green</key>
+                <value>
+                  <name>green</name>
+                </value>
+              </entry>
+              <entry>
+                <key>red-en</key>
+                <value>
+                  <name>red-en</name>
+                </value>
+              </entry>
+              <entry>
+                <key>red-ja</key>
+                <value>
+                  <name>red-ja</name>
+                </value>
+              </entry>
+            </descriptors>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Routing Strategy</key>
+                <value>Route to Property name</value>
+              </entry>
+              <entry>
+                <key>blue</key>
+                <value>${text:toUpper():contains('BLUE'):or(${text:contains('青')})}</value>
+              </entry>
+              <entry>
+                <key>green</key>
+                <value>${text:toUpper():contains('GREEN'):or(${text:contains('緑')})}</value>
+              </entry>
+              <entry>
+                <key>red-en</key>
+                <value>${anyDelineatedValue('${text}', ' '):toUpper():matches('[^A-Z]?RED[^A-Z]?')}</value>
+              </entry>
+              <entry>
+                <key>red-ja</key>
+                <value>${text:contains('赤')}</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Route on Color (En and Ja)</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>blue</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>green</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>red-en</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>red-ja</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>unmatched</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+        </processors>
+      </contents>
+      <name>Get Color Tweets</name>
+    </processGroups>
+  </snippet>
+  <timestamp>09/16/2016 11:18:57 JST</timestamp>
+</template>
