@@ -80,7 +80,6 @@ clickTweetNavi = (evt) => {
 const url = 'http://localhost:8180';
 
 var reloadTweets = () => {
-  console.log('loading tweets...');
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -119,7 +118,6 @@ var renderTweetsFor = (tws, tweets) => {
 }
 
 var renderTweets = (tweets) => {
-  console.log(tweets);
   // Delete old tweets.
   document.querySelectorAll('.tweet').forEach((t) => {
     t.parentNode.removeChild(t);

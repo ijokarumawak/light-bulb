@@ -2,7 +2,7 @@ var awsIot = require('aws-iot-device-sdk');
 var fs = require('fs')
 
 const thingName = 'LightBulb';
-const outputJsFile = 'js/refreshLight.js';
+const outputJsFile = 'web-ui/js/refreshLight.js';
 
 const thingShadows = awsIot.thingShadow({
   keyPath: 'certs/private.pem.key',
