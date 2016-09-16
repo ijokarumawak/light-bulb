@@ -45,7 +45,8 @@ jspm_packages
 # To make Git track the file again:
 # git update-index --no-assume-unchanged path/to/file.txt.
 # Don't update following files:
-# js/refreshLight.js
+# web-ui/js/refreshLight.js
+# nifi/env.properties
 
 # Followings are simply ignored:
 certs
