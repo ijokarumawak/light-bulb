@@ -1,5 +1,8 @@
+# Intelligent Light Bulb
 
-![light-bulb screenshot](https://raw.githubusercontent.com/ijokarumawak/light-bulb/master/docs/images/light-bulb-screenshot.png)
+This is a demo project powered by Apache NiFi, AWS Iot and Node JS.
+
+![light-bulb screenshot](https://raw.githubusercontent.com/ijokarumawak/light-bulb/master/docs/images/architecture.png)
 
 ## Limitation
 - AWS region is hard coded as `ap-northeast-1`
