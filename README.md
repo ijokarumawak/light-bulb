@@ -1,3 +1,6 @@
+
+![light-bulb screenshot](https://raw.githubusercontent.com/ijokarumawak/light-bulb/master/docs/images/light-bulb-screenshot.png)
+
 ## Limitation
 - AWS region is hard coded as `ap-northeast-1`
 
